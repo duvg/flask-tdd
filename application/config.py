@@ -6,11 +6,11 @@ class Config(object):
     db_password = os.environ["POSTGRES_PASSWORD"]
     db_hostname = os.environ["POSTGRES_HOSTNAME"]
     db_port = os.environ["POSTGRES_PORT"]
-    database_name = os.environ["APPLICATION_WEB"]
+    database_name = os.environ["APPLICATION_DB"]
     
     
-    SQLALCHEMY_DATABASE_URL = (
-        f"postgressql+pysopg2://{db_user}:{db_password}@{db_hostname}:{db_port}/{database_name}"
+    SQLALCHEMY_DATABASE_URI = (
+        f"postgresql+psycopg2://{db_user}:{db_password}@{db_hostname}:{db_port}/{database_name}"
     )
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
