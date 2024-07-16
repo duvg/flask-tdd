@@ -1,1 +1,5 @@
 -r prod.txt
+
+pytest
+coverage
+pytest-cov
